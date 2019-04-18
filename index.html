@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>Moja witryna</title>
+
+     <meta name="description" content="Moja strona na zajęcia z programowania w internecie">
+     <meta name="keywords" content="programowanie w internecie, nauka">
+     <meta name="author" content="Łukasz Grochowski">
+
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="arkusz.css">
+     <link href="https://fonts.googleapis.com/css?family=Margarine" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Blend IT up</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active spa" data-page="homepage" href="">Strona główna <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link spa" data-page="blog" href="">HTML,CSS</a>
+              <a class="nav-item nav-link spa" data-page="game" href="">Kółko i krzyżyk</a>
+              <a class="nav-item nav-link" data-page="fbapp" href="facebook_app.html">Aplikacja FB</a>
+            </div>
+          </div>
+    </nav>
+
+    <div id="container" class="container-fluid">
+ 
+      <div class="row">
+        <div id="content" class="col-sm-12 col-md-8">
+          
+          <div class="strona homepage">
+            <div class="wpis-homepage">
+            
+              <h1>Łukasz Grochowski</h1>
+            
+              Błędy z cba:
+              
+              <img src="zdj/errors.png" class="img-thumbnail float-left" alt="error" />
+            
+            </div>
+          </div>
+
+          <div class="strona blog">
+            <div class="wpis">
+                <input type="checkbox" class="read-more-state" id="post-1" />
+
+                <img src="zdj/logo_blender.png" class="img-thumbnail float-left" alt="blender_logo" />
+                
+                  Blender – wolne i otwarte oprogramowanie do modelowania i renderowania obrazów oraz 
+                  animacji trójwymiarowych o niekonwencjonalnym interfejsie użytkownika. Umożliwia 
+                  także tworzenie prezentacji interaktywnych na własnym silniku graficznym.
+                  <ul class="read-more-wrap">
+                      <li class="read-more-target">
+                        <b>Data pierwszego wydania:</b> 1998
+                      </li>
+                      <li class="read-more-target">
+                        <b>Pierwszy twórca:</b> Ton Roosendaal
+                      </li>
+                      <li class="read-more-target">
+                        <b>Licencja:</b> GNU General Public License v2 or later
+                      </li>
+                      <li class="read-more-target">
+                        <b>Aktualna wersja stabilna:</b> 2.79 / 11 września 2017; rok temu
+                      </li>
+                      <li class="read-more-target">
+                        <b>Rodzaj:</b> Program graficzny (grafika 3D)
+                      </li>
+                      <li class="read-more-target">
+                        <b>Język:</b> C++, Python
+                      </li>
+                  </ul>
+
+                <label for="post-1" class="read-more-trigger"></label>
+            </div>
+
+            <div class="wpis">
+              <input type="checkbox" class="read-more-state" id="post-2" />
+
+              <img src="zdj/blender28-logo.jpg" class="img-thumbnail float-left" alt="blender_logo" />
+              Długo oczekiwana wersja 2.80 Blendera doczekała się statusu bety.
+              <br/>
+              Wśród nowości:
+
+              <ul class="read-more-wrap">
+                  <li>
+                      Eevee - zaawansowany silnik renderujący czasu rzeczywistego
+                  </li>
+                  <li>
+                      Zmiany interfejsu graficznego
+                  </li>
+                  <li class="read-more-target">
+                      Rozbudowany Grease Pencil, który stał się pełnoprawnym narzędziem do rysowania i animacji 2D
+                  </li>
+                  <li class="read-more-target">
+                      Żegnajcie 20 warstw na scenę! Nowy system zarządzania sceną dzielący obiekty na "kolekcje"
+                  </li>
+                  <li class="read-more-target">
+                      Nowe shadery dla Cyclesa
+                  </li>
+                  <li class="read-more-target">
+                      Edycja wielu obiektów naraz
+                  </li>
+                  <li class="read-more-target">
+                      Usprawniona symulacja Cloth
+                  </li>
+              </ul>
+
+              <label for="post-2" class="read-more-trigger"></label>
+            </div>
+
+            <!--<div class="wpis">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2hGSDD9-Tkc" allowfullscreen>
+                  </iframe>
+                </div>
+            </div>-->
+          </div>
+
+          <div class="strona game">
+            <div id="gra">
+              <h2>Kółko i krzyżyk</h2>
+              <div id="log">Witaj!</div>
+              <br/>
+              <table>
+                <tr>
+                  <td id="p1" class="przycisk" onclick="pisz(this)"></td>
+                  <td id="p2" class="przycisk" onclick="pisz(this)"></td>
+                  <td id="p3" class="przycisk" onclick="pisz(this)"></td>
+                </tr>
+                <tr>
+                  <td id="p4" class="przycisk" onclick="pisz(this)"></td>
+                  <td id="p5" class="przycisk" onclick="pisz(this)"></td>
+                  <td id="p6" class="przycisk" onclick="pisz(this)"></td>
+                </tr> 
+                <tr>
+                  <td id="p7" class="przycisk" onclick="pisz(this)"></td>
+                  <td id="p8" class="przycisk" onclick="pisz(this)"></td>
+                  <td id="p9" class="przycisk" onclick="pisz(this)"></td>
+                </tr>
+              </table>
+              <br/>
+              <button type="button" class="btn btn-secondary btn-lg" onclick="reset()">Reset</button>
+          </div>
+          </div>
+          
+        </div>
+        
+        <div id="gallery" class="col-sm-12 col-md-4 text-center">
+
+          <div class="foto">
+              <img src="zdj/smok.png" class="rounded img-thumbnail img-fluid" alt="smok" />
+          </div>
+
+          <div class="foto">
+              <img src="zdj/budynek.png" class="rounded img-thumbnail img-fluid" alt="budynek" />
+          </div>
+
+          <div class="foto">
+              <img src="zdj/statek.png" class="rounded img-thumbnail img-fluid" alt="statek" />
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div id="footer" class="col-sm-12">
+            <a href="http://validator.w3.org/check?uri=lucjan.cba.pl/index.html">
+              <img src="zdj/html5valid.png" class ="rounded float-left" alt="Valid HTML 5"/>
+            </a>
+        </div>
+      </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" defer></script>
+<script src="main.js" defer></script>
+<script src="gra.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>  
+</body>
+
+</html>				
