@@ -48,6 +48,7 @@ window.fbAsyncInit = function() {
         <li class="list-group-item">Nazwisko: ${user.last_name}</li>
         <li class="list-group-item">ID: ${user.id}</li>
         <li class="list-group-item">Email: ${user.email}</li>
+        <li class="list-group-item">Email: ${user.birthday}</li>
         <li class="list-group-item">Zdjęcie profilowe: <img src="${user.picture.data.url}"/></li>
       </ul>
     `;
