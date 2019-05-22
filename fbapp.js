@@ -44,7 +44,7 @@ window.fbAsyncInit = function() {
     } else {
       console.log('User cancelled login or did not fully authorize.');
      }
-    },{scope: 'email,user_birthday'});
+    },{scope: 'email,pages_show_list'});
   }
 
   function wyswietl_dane(user){
