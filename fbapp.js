@@ -32,12 +32,20 @@ window.fbAsyncInit = function() {
     });
   }
   function testAPI(){
-    FB.api('/me?fields=name,email,birthday,picture{url},first_name,last_name', function(response){
-      if(response && !response.error){
-        console.log(response);
-        wyswietl_dane(response);
-      }
-    })
+    FB.login(function(response) {
+      if (response.authResponse) {
+       console.log('Elo! Pobieram info ... ');
+       fields = ["email","id","first_name","last_name","middle_name","name","name_format","picture","short_name","birthday","friends"];
+       FB.api('/me?fields=name,email,birthday,picture{url},first_name,last_name', function(response){
+        if(response && !response.error){
+          console.log(response);
+          wyswietl_dane(response);
+        }
+      });
+    } else {
+      console.log('User cancelled login or did not fully authorize.');
+     }
+    },{scope: 'email,user_birthday,user_friends'});
   }
 
   function wyswietl_dane(user){
