@@ -35,7 +35,7 @@ window.fbAsyncInit = function() {
     FB.login(function(response) {
       if (response.authResponse) {
        console.log('Elo! Pobieram info ... ');
-       FB.api('/me?fields=email,id,first_name,last_name,picture,birthday', function(response){
+       FB.api('/me?fields=email,id,first_name,last_name,picture,birthday,name', function(response){
         if(response && !response.error){
           console.log(response);
           wyswietl_dane(response);
@@ -44,7 +44,7 @@ window.fbAsyncInit = function() {
     } else {
       console.log('User cancelled login or did not fully authorize.');
      }
-    },{scope: 'email'});
+    },{scope: 'email,user_birthday'});
   }
 
   function wyswietl_dane(user){
