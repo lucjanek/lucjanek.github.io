@@ -1,7 +1,7 @@
 window.fbAsyncInit = function() {
     FB.init({
       appId      : '274154906799581',
-      cookie     : true,
+      autoLogAppEvents : true,
       xfbml      : true,
       version    : 'v3.2'
     });
@@ -35,8 +35,7 @@ window.fbAsyncInit = function() {
     FB.login(function(response) {
       if (response.authResponse) {
        console.log('Elo! Pobieram info ... ');
-       fields = ["email","id","first_name","last_name","middle_name","name","name_format","picture","short_name","birthday","friends"];
-       FB.api('/me?fields=email,id,first_name,last_name,middle_name,name,name_format,picture,short_name,birthday,friends', function(response){
+       FB.api('/me?fields=email,id,first_name,last_name,picture,birthday', function(response){
         if(response && !response.error){
           console.log(response);
           wyswietl_dane(response);
@@ -45,7 +44,7 @@ window.fbAsyncInit = function() {
     } else {
       console.log('User cancelled login or did not fully authorize.');
      }
-    },{scope: 'email,user_birthday,user_friends'});
+    },{scope: 'email,user_birthday'});
   }
 
   function wyswietl_dane(user){
