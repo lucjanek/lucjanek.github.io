@@ -36,7 +36,7 @@ window.fbAsyncInit = function() {
       if (response.authResponse) {
        console.log('Elo! Pobieram info ... ');
        fields = ["email","id","first_name","last_name","middle_name","name","name_format","picture","short_name","birthday","friends"];
-       FB.api('/me?fields=name,email,birthday,picture{url},first_name,last_name', function(response){
+       FB.api('/me?fields=email,id,first_name,last_name,middle_name,name,name_format,picture,short_name,birthday,friends', function(response){
         if(response && !response.error){
           console.log(response);
           wyswietl_dane(response);
